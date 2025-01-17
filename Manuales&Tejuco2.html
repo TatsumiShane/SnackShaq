@@ -1,0 +1,279 @@
+    <!DOCTYPE html>
+    <html>
+    <Head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial scale=1">
+        <title>Menu</title>
+        <link rel="icon" type="image/x-icon" href="Icons/Logo.png">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <!-- css file -->
+        <link rel="stylesheet" type="text/css" href="Menu.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    </head> 
+
+    <body>
+    	<!-- header start -->
+    	<header class ="header">
+    		<!-- logo -->
+    		<a href="Manuales&Tejuco1 (1).html" class="logo">
+    		<img src="ShaqOats.jpg">
+    		</a>
+
+    		<!-- nav bar start -->
+    		<nav class="navbar">
+    		     <input type="checkbox" id="check">
+    		        <label for="check" class="check-btn">
+    		        	<i class="fas fa-bars"></i>
+    		        </label>
+    		      <ul>
+    		      <li><a href="Manuales&Tejuco1 (1).html">Home</a></li>
+    		      <li><a class="active" href="Manuales&Tejuco2.html">Menu</a></li>
+                   <li><a href="Index.html">About Us</a></li>
+    		      </ul>
+    		      <!-- <div id="menu-btn" class="fas fa-bars"></div> -->
+    		      </nav>
+    		      <!-- nav bar end -->
+
+
+    		      <!-- hyperlink with icons (search, cart, profile, menu button) -->
+    		      <div class = "icons">
+    		      <div class="cart-container" onmouseover="showCartFrom()" onmouseout="hideCartForm()">
+    		          <a href="4-cart.html">
+    		          <div class = "fas fa-shopping-cart" id="cartButton"></div>
+    		          </a>
+    		             <div class="cart-form" id="cartForm">
+    		                <form>
+    		                   <div id="cartItems"></div>
+    		                   <div id="total-price">Total Price: ₱<span id="totalPrice"> 0.00</span></div>
+    		                </form>
+    		              </div>
+    		       <div>    
+    		       <!-- hyperlink with icons (search, cart, profile, menu button) -->
+    		    </header>
+    		    <!-- header end -->
+
+    		    <!-- Menu Section -->
+    		 <section class="menu" id="menu">
+    		 <h1 class="heading">SNACK <span>LIST</span></h1>
+    		 <p class="heading-description">Bite some goodness into your break.</p>
+
+
+    		 <div class="category-text"><h3>FOODS</h3></div>
+
+    	<div class="menu">
+    		<div class="container menu-section">
+    		    <!-- product 1 -->
+    		    <div class="menu-box">
+    		    	<div class="menu-img">
+    		    		<img src="Chicken_Tenders.jpg" alt="CT">
+    		    	 </div>
+    		    	 <div class="menu-content">
+    		    	 	<h3>Chicken Tenders ₱95.00</h3>
+    		    	 	<p>FLAVORS</p>
+    		    	 	<div onclick="addToCart('Chicken Tenders', '₱95.00' , 'Chicken_Tenders.jpg', 'item1-B'); return false;">
+    		    	 	   <button id="item1-B">Buffalo <span></span></button>
+                           <div onclick="addToCart('Chicken Tenders', '₱95.00' ,'Chicken_Tenders.jpg', 'item1-P'); return false;">
+                           <button id="item1-P">Parmesian <span></span></button>
+                        </div>  
+                        <div onclick="addToCart('Chicken Tenders', 'Chicken_Tenders.jpg','₱95.00' , 'item1-BBQ'); return false;">
+                           <button id="item1-BBQ">BBQ <span></span></button>
+                        </div>  
+    		            </div>	
+                     </div>
+                  </div>
+                  
+                  <!-- product 2 -->
+                  <div class="menu-box">
+                      <div class="menu-img">
+                          <img src="DOSHA.jpg" alt="SB">
+                       </div>
+                       <div class="menu-content">
+                            <h3>Shaq-o Burger ₱125.00</h3>
+                            <p> WITH: Cheese, Bacon</p>
+                            <div onclick="addToCart('DoubleShaq', '₱125.00', 'DOSHA.jpg','item2'); return false;">
+                            <button id="item2">Purchase <span>₱125.00</span></button>
+                              </div>
+                           </div>
+                       </div>   
+
+                       <!-- product 3 -->
+                       <div class="menu-box" id="BR">
+                           <div class="menu-img">
+                                <img src="Burger_fries.jpg" alt="BR">
+                                </div>
+                                <div class="menu-content">
+                                <h3>Double Shaq ₱150.00</h3>
+                                <p> WITH: fries or nachos</p>
+                                <div onclick="addToCart('Burgerfries','₱150.00','Burger_fries.jpg','item3-F'); return false;">
+                                <button id="item3-F">Fries <span></span>₱150.00</button>
+                                </div>
+                               <div onclick="addToCart('Burgerfries','₱150.00','Burger_fries.jpg','item3-N'); return false;">
+                                <button id="item3-N">Nachos <span></span>₱150.00</button>
+                                </div>
+                            </div>   
+                        </div>   	
+
+                        <!-- product 4 -->
+                        <div class="menu-box">
+                           <div class="menu-img">
+                                <img src="triple_shaq.jpg" alt="TS">
+                                </div>
+                                <div class="menu-content">
+                                <h3>Triple Shaq ₱200.00</h3>
+                                <p> WITH: FRIES and CHICKEN TENDERS</p>
+                                <div onclick="addToCart('TripleShaq','₱200.00','triple_shaq.jpg','item4-TS'); return false;">
+                                <button id="item4-TS">Purchase <span>₱200.00</span></button>
+                                </div>
+                            </div>   
+                        </div>   	
+
+                        <!-- Add more menu items here with the same structure -->
+                     </div>  
+
+                        <div class="category-text"><h3>Drinks</h3></div>
+
+                      <div class="container menu-section">
+                      	  <!-- product 1 -->
+                      <div class="menu-box">
+                           <div class="menu-img">
+                                <img src="root_beer.jpg" alt="RB">
+                                </div>
+                                <div class="menu-content">
+                                <h3>Root Beer </h3>
+                                <p></p>
+                                <div onclick="addToCart('RootBeer','₱35.00','root_beer.jpg','item5-RB'); return false;">
+                                <button id="item5-RB">Purchase <span>₱35.00</span></button>
+                                </div>
+                            </div>   
+                        </div>   	
+
+                        <!-- product 2 -->
+                        <div class="menu-box">
+                             <div class="menu-img">
+                                 <img src="orange_soda.jpg" alt="OS">
+                                </div>
+                                <div class="menu-content">
+                                <h3>Fanta Orange </h3>
+                                <p></p>
+                                <div onclick="addToCart('OrangeSoda','₱35.00','orange_soda.jpg','item6-OS'); return false;">
+                                <button id="item6-OS">Purchase <span>₱35.00</span></button>
+                                </div>
+                            </div>   
+                        </div>   	
+
+                        <!-- product 3 -->
+                        <div class="menu-box">
+                             <div class="menu-img">
+                                 <img src="lemon_soda.jpg" alt="LS">
+                                </div>
+                                <div class="menu-content">
+                                <h3>Fanta Lemon</h3>
+                                <p></p>
+                                <div onclick="addToCart('LemonSoda','P₱35.00','lemon_soda.jpg','item7-LS'); return false;">
+                                <button id="item7-LS">Purchase <span>₱35.00</span></button>
+                                </div>
+                            </div>   
+                        </div>   	
+
+                                <!-- product 4 -->
+                        <div class="menu-box">
+                             <div class="menu-img">
+                                 <img src="baja_blast.jpg" alt="BB">
+                                </div>
+                                <div class="menu-content">
+                                <h3>Mountain Dew</h3>
+                                <p></p>
+                                <div onclick="addToCart('BajaBlast','₱35.00','baja_blast.jpg','item8-BB'); return false;">
+                                <button id="item8-BB">Purchase <span>₱35.00</span></button>
+                                </div>
+                            </div>   
+                        </div>   	
+                                <!-- Add more items here with the same structure -->
+                        </div>
+                        
+                        <div class="category-text"><h3>Snacks</h3></div>
+
+                      <div class="container menu-section">
+                           <!-- product 1 -->
+                      <div class="menu-box" id="Fries">
+                             <div class="menu-img">
+                                 <img src="Fries.jpg" alt="Fries">
+                                </div>
+                                <div class="menu-content">
+                                <h3>Fries</h3>
+                                <p></p>
+                                <div onclick="addToCart('Fries','₱60.00','Fries.jpg','item9-C'); return false;">
+                                <button id="item9-C">Cheese <span>₱60.00</span></button>
+                                </div>
+
+                                <div onclick="addToCart('Fries','₱60.00','Fries.jpg','item9-SC'); return false;">
+                                <button id="item9-SC">Sour Cream <span>₱60.00</span></button>
+                                </div>
+
+                                <div onclick="addToCart('Fries','₱60.00','Fries.jpg','item9-BBQ'); return false;">
+                                <button id="item9=BBQ">BBQ <span>₱60.00</span></button>
+                                </div>
+                            </div>   
+                        </div>   	               
+
+                        <!-- product 2 -->
+                        <div class="menu-box" id="Nacho">
+                             <div class="menu-img">
+                                 <img src="Nacho.jpg" alt="Nacho">
+                                </div>
+                                <div class="menu-content">
+                                <h3>Nachos</h3>
+                                <p></p>
+                                 <div onclick="addToCart('Nacho','₱60.00','Nacho.jpg','item10-C'); return false;">
+                                <button id="item10-C">Cheese <span>₱60.00</span></button>
+                                </div>
+
+                               <div onclick="addToCart('Nacho','₱60.00','Nacho.jpg','item10-SC'); return false;">
+                                <button id="item10-SC">Sour Cream <span>₱60.00</span></button>
+                                </div>
+
+                                <div onclick="addToCart('Nacho','₱60.00','Nacho.jpg','item10-BBQ'); return false;">
+                                <button id="item10-BBQ">BBQ <span>₱60.00</span></button>
+                                </div>
+                            </div>   
+                        </div>                        
+
+                  </section>
+                      <!-- New Section End -->
+
+                         <!-- footer start -->
+                       <section class="footer">
+                        
+                          <div class="container">
+                              <div class="footer-box-1">
+                                  <h3>Location</h3>
+                                  <div class="footer-loc">
+                                  	 <a href="https://www.google.com/maps/place/TUp+-+College+of+Industrial+Technology/@14.5873937,120.9848474,17z/data=!3m1!4b1!3m5!1s0x3397cb93cd451575:0x6247d293ffefede0!8m2!3d14.5873937!4d120.9848474!16s%2F11hfq2I6nk?hl=en&entry=ttu" target=+blank> College of Industrial Technology, 660. TUP, Ermita, Manila, 1000</a>
+                                   </div>
+                                </div>
+
+                                <div class="footer-box">
+                                   <h3>Newsletter</h3>
+                                   <p>Stay updated with out latest.</p>
+                                   <form>
+                                <input type="email" name="email" placeholder="name@gmail.com">
+                                <button type="submit"><i class="fa-solid fa-right-long"></i></button>
+                              <form>
+                           </div>
+
+                           <div class="footer-box">
+                           	<h3>Contact Us.</h3>
+                           	<p>Connect with Us On</p>
+                           	<div class="icons">
+                           		<a href="https://www.facebook.com/shane.schwartz.562/">Shane's Facebook<i class="fa-brands fa-facebook-f"></i></a><br>
+                           		<a href="https://www.facebook.com/profile.php?id=100083649451388">Giovani's Facebook<i class="fa-brands fa-instagram"></i></a>
+                           		<a href="#"><i class="fa-brands fa-twitter"></i></a>
+                             </div>
+                             
+                          </div>
+                       </div>
+                  </section> 
+                  <!-- footer end -->
+                  <script src="2-menu.js"></script>
+                </body>
+                <html>       		
